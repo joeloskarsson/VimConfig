@@ -64,3 +64,7 @@ nmap t :NERDTreeToggle<CR>
 
 "Fix weird arrow key issue
 nmap OA <Nop>
+
+set wrap
+set linebreak
+set nolist  " list disables linebreak
