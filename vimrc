@@ -69,6 +69,7 @@ endif
 
 "Fix weird arrow key issue
 nmap OA <Nop>
+imap OA <Nop>
 
 set wrap
 set linebreak
