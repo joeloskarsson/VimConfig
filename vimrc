@@ -62,6 +62,11 @@ let NERDTreeMapQuit='q'
 let NERDTreeQuitOnOpen=1
 nmap t :NERDTreeToggle<CR>
 
+"Lightline fixes
+if !has('gui_running')
+  set t_Co=256
+endif
+
 "Fix weird arrow key issue
 nmap OA <Nop>
 
