@@ -37,7 +37,7 @@ set noshowmode
 set noruler
 set laststatus=2
 set noshowcmd
-set timeoutlen=1000 ttimeoutlen=0
+set timeoutlen=0 ttimeoutlen=0
 
 "Disable arrow keys
 nnoremap <Left> <Nop>
@@ -83,7 +83,17 @@ autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('
 
 "Change update time
 set updatetime=100
+set timeoutlen=0 ttimeoutlen=0
 
 set wrap
 set linebreak
 set nolist  " list disables linebreak
+
+" + for go to end of life
+nmap + <End>
+vmap + <End>
+
+" tab bindings
+nnoremap <S-k> :tabprevious<CR>
+nnoremap <S-j> :tabnext<CR>
+nnoremap <S-d> :tabclose<CR>
