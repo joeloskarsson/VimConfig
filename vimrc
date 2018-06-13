@@ -61,8 +61,14 @@ let NERDTreeMapQuit='q'
 let NERDTreeQuitOnOpen=1
 nmap t :NERDTreeToggle<CR>
 
+"Lightline fixes
+if !has('gui_running')
+  set t_Co=256
+endif
+
 "Fix weird arrow key issue
 nmap OA <Nop>
+imap OA <Nop>
 
 "Always display git gutter
 if exists('&signcolumn')  " Vim 7.4.2201
@@ -77,3 +83,7 @@ autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('
 
 "Change update time
 set updatetime=100
+
+set wrap
+set linebreak
+set nolist  " list disables linebreak
