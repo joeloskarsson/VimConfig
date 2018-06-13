@@ -14,7 +14,6 @@ set history=100
 
 "Indention
 filetype indent on
-set nowrap
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -64,3 +63,17 @@ nmap t :NERDTreeToggle<CR>
 
 "Fix weird arrow key issue
 nmap OA <Nop>
+
+"Always display git gutter
+if exists('&signcolumn')  " Vim 7.4.2201
+  set signcolumn=yes
+else
+  let g:gitgutter_sign_column_always = 1
+endif
+
+" Also gitgutter fix
+autocmd BufEnter * sign define dummy
+autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
+
+"Change update time
+set updatetime=100
