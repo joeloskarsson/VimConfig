@@ -2,7 +2,6 @@
 
 "Pathogen
 execute pathogen#infect()
-
 syntax enable
 
 set colorcolumn=90 "Show 90 characters line
@@ -37,7 +36,7 @@ set noshowmode
 set noruler
 set laststatus=2
 set noshowcmd
-set timeoutlen=0 ttimeoutlen=0
+set timeoutlen=1000 ttimeoutlen=0
 
 "Disable arrow keys
 nnoremap <Left> <Nop>
@@ -68,7 +67,6 @@ endif
 
 "Fix weird arrow key issue
 nmap OA <Nop>
-imap OA <Nop>
 
 "Always display git gutter
 if exists('&signcolumn')  " Vim 7.4.2201
@@ -83,7 +81,6 @@ autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('
 
 "Change update time
 set updatetime=100
-set timeoutlen=0 ttimeoutlen=0
 
 set wrap
 set linebreak
@@ -97,3 +94,18 @@ vmap + <End>
 nnoremap <S-k> :tabprevious<CR>
 nnoremap <S-j> :tabnext<CR>
 nnoremap <S-d> :tabclose<CR>
+
+" ctags
+nnoremap gt <C-]>
+
+" supertab config
+let g:SuperTabCrMapping = 1
+let g:SuperTabMappingBackward = '<tab>'
+set completeopt=longest,menuone " config for autocompletion
+
+" nedcommenter config
+filetype plugin on
+let g:NERDSpaceDelims = 1
+let g:NERDTrimTrailingWhitespace = 1
+nmap C <plug>NERDCommenterToggle
+vmap C <plug>NERDCommenterToggle
