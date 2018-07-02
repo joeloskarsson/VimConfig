@@ -58,7 +58,7 @@ let NERDTreeMapActivateNode='l'
 let NERDTreeMapCloseChildren='h'
 let NERDTreeMapQuit='q'
 let NERDTreeQuitOnOpen=1
-nmap t :NERDTreeToggle<CR>
+nmap t :NERDTreeToggle<CR>r
 
 "Lightline fixes
 if !has('gui_running')
