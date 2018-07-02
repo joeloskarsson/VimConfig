@@ -109,3 +109,6 @@ let g:NERDSpaceDelims = 1
 let g:NERDTrimTrailingWhitespace = 1
 nmap C <plug>NERDCommenterToggle
 vmap C <plug>NERDCommenterToggle
+
+" vim-surround
+vmap s S
