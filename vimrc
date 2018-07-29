@@ -112,3 +112,7 @@ vmap C <plug>NERDCommenterToggle
 
 " vim-surround
 vmap s S
+
+" Smart case search (only case sensitive when capital letters in search term)
+set ignorecase
+set smartcase
