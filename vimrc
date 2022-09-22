@@ -6,6 +6,7 @@ syntax enable
 
 set colorcolumn=90 "Show 90 characters line
 set number "Show line numbers
+set relativenumber "Show relative line numbers
 
 "Keep more in memory, faster
 set hidden
